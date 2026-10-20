@@ -1,4 +1,5 @@
-from starter_scripts.db_starter import return_execute_query, connection
+from starter_scripts.db_starter import connection
+from db_functions import return_execute_query
 
 result = return_execute_query(connection, """
     SELECT currency_id, iso_code

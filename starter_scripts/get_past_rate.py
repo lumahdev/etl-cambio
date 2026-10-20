@@ -1,6 +1,7 @@
 import requests
-from starter_scripts.db_starter import execute_many_query, connection
+from starter_scripts.db_starter import connection
 from currency_dict import currency_ids
+from db_functions import execute_many_query
 
 request = requests.get('https://api.frankfurter.dev/v2/rates?base=brl&from=2026-09-01&to=2026-10-17')
 

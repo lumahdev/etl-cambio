@@ -1,5 +1,6 @@
 import requests
-from starter_scripts.db_starter import execute_query, connection
+from starter_scripts.db_starter import connection
+from db_functions import execute_query
 
 request = requests.get('https://api.frankfurter.dev/v2/currencies')
 
