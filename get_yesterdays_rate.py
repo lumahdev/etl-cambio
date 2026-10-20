@@ -5,19 +5,19 @@ from starter_scripts.db_starter import connection
 from currency_dict import currency_ids
 from datetime import date, timedelta
 
-# yesterday = (date.today() - timedelta(days=1)).isoformat()
-
-# request = requests.get(
-#     "https://api.frankfurter.dev/v2/rates",
-#     params={"base": "brl", "date": yesterday},
-#     timeout=30
-# )
+yesterday = (date.today() - timedelta(days=1)).isoformat()
 
 request = requests.get(
     "https://api.frankfurter.dev/v2/rates",
-    params={"base": "brl", "date": "2026-10-18"},
+    params={"base": "brl", "date": yesterday},
     timeout=30
 )
+
+# request = requests.get(
+#     "https://api.frankfurter.dev/v2/rates",
+#     params={"base": "brl", "date": "2026-10-18"},
+#     timeout=30
+# )
 
 if(request.status_code == 200):
     rates = request.json()
