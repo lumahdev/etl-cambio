@@ -5,6 +5,7 @@ def execute_many_query(connection, query, params=None):
 
     try:
         cursor.executemany(query, params)
+        connection.commit()
 
     except Error as err:
         connection.rollback()
